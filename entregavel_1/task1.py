@@ -1,5 +1,8 @@
+import readline
 # 1
 def verifyFLItens(l):
+    ''' using the index i can check if the first(index:0) and 
+    the last one(index:-1) are equal'''
     if l[0] == l[-1]:
         return True
     else:
@@ -7,6 +10,8 @@ def verifyFLItens(l):
 
 # 2
 def primeCheck(n):
+    ''' add all divs of n in the list and check if the list of divs 
+    is different of 2 two '''
     allDivsOfn=[]
     for i in range(1,n+1):
         if n%i == 0:
@@ -18,6 +23,8 @@ def primeCheck(n):
         return True
 
 def primeDivisor(m):
+    ''' add all divs of m in the list, check each element of 
+    the first list is a prime and return a list of prime divisors '''
     allDivsOfm = []
     primeDivs=[]
     for i in range(1, m+1):
@@ -30,10 +37,13 @@ def primeDivisor(m):
     return primeDivs
 
 def maxPrimeDiv(m):
+    ''' return value of the max element in the list of prime divisors '''
     return max(primeDivisor(m))
 
 # 3
 def palin(x):
+    ''' doesnt matter if it is a string or an integer, 
+    so i can use the reverse trick that are common used for lists '''
     xRev = x[::-1]
     if x == xRev:
         return xRev
@@ -42,6 +52,8 @@ def palin(x):
 
 # 4
 def primeSum():
+    ''' check each integer from 1 to 999 if its a prime and
+     sum every prime that you put on the list '''
     l = []
     for i in range(1,1000):
         if primeCheck(i):
@@ -114,7 +126,7 @@ while True:
             maxPrimeDiv(m)))
         print('')
     elif option == '3':
-        x = input("Give me a numbaar: ")
+        x = input("Give me a numbaaaaar: ")
         if palin(x) != False:
             print('')
             print(str.format('The number {} is a palindrome',x))
