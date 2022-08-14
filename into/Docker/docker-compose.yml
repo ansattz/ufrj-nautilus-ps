@@ -1,3 +1,4 @@
+# this is a example that was used in class
 version: '3'
 services:
   ps:

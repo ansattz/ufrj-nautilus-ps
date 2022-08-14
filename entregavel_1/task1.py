@@ -1,4 +1,5 @@
 import readline
+
 # 1
 def verifyFLItens(l):
     ''' using the index i can check if the first(index:0) and 
@@ -16,7 +17,6 @@ def primeCheck(n):
     for i in range(1,n+1):
         if n%i == 0:
             allDivsOfn.append(i)
-        i+=1
     if len(allDivsOfn) != 2:
         return False
     else:
@@ -30,7 +30,6 @@ def primeDivisor(m):
     for i in range(1, m+1):
         if m%i == 0:
             allDivsOfm.append(i)
-        i+=1
     for j in allDivsOfm:
         if primeCheck(j) == True:
             primeDivs.append(j)
