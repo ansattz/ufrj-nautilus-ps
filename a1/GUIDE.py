@@ -52,7 +52,7 @@ the services from your configuration.""")
         print('')
         print("""- create_container.sh is a bash script to create the first container
 without any pre-settings. 
-\u001b[33m chmod u+x create_container.sh \u001b[0m
+\u001b[33m chmod +x create_container.sh \u001b[0m
 \u001b[33m ./create_container.sh \u001b[0m """)
         print('')
         print("""- Dockerfile simplify the construction of a container. 
