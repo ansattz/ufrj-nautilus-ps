@@ -23,7 +23,7 @@ def primeCheck(n):
         return True
 
 def primeDivisor(m):
-    ''' add all divs of m in the list, check each element of 
+    ''' add all divs of m in the list, check if each element of 
     the first list is a prime and return a list of prime divisors '''
     allDivsOfm = []
     primeDivs=[]
@@ -43,7 +43,7 @@ def maxPrimeDiv(m):
 # 3
 def palin(x):
     ''' doesnt matter if it is a string or an integer, 
-    so i can use the reverse trick that are common used for lists '''
+    so i can use the reverse trick that are common used in lists '''
     xRev = x[::-1]
     if x == xRev:
         return xRev
@@ -52,8 +52,8 @@ def palin(x):
 
 # 4
 def primeSum():
-    ''' check each integer from 1 to 999 if its a prime and
-     sum every prime that you put on the list '''
+    ''' check if each integer from 1 to 999 is a prime and
+    sum every of these primes'''
     l = []
     for i in range(1,1000):
         if primeCheck(i):
@@ -61,7 +61,7 @@ def primeSum():
     return sum(l)
 
 def menu():
-    print('========= GUIDE =========')
+    print('========= MENU =========')
     print('')
     print('1 - Checks if the first item is the same as the last one of a list')
     print('2 - Greatest prime divisor of a number')
@@ -74,13 +74,13 @@ def menu():
 while True:
     menu()
 
-    option = input('Choose one option: ')
+    option = input('Choose an option: ')
     if option == '1':
         print('')
         print('1 - You are give me a list')
         print('2 - You are give me itens for the list')
         print('')
-        solvingAmbig = input('Give me more info(choose one option): ')
+        solvingAmbig = input('Give me more info(choose an option): ')
         print('')
         if solvingAmbig == '1':
             stringList = input('Give me the list(without space between commas): ')
@@ -99,7 +99,7 @@ while True:
                 print('')
                 continue
         elif solvingAmbig == '2':
-            numbers = list(map(int,input("""Give me the F* itens(with space
+            numbers = list(map(int,input("""Give me the itens(with space
                 between them: """).strip().split()))
             print('')
             if verifyFLItens(numbers) == True:
@@ -126,7 +126,7 @@ while True:
             maxPrimeDiv(m)))
         print('')
     elif option == '3':
-        x = input("Give me a numbaaaaar: ")
+        x = input("Give me a number: ")
         if palin(x) != False:
             print('')
             print(str.format('The number {} is a palindrome',x))
