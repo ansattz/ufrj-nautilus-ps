@@ -12,7 +12,7 @@ class Vehicle:
         self.hydrophones]
 
     def showThisAUV(self):
-        return self.name, self.thruster, self.sensor, self.birth, self.hydrophones
+        return [self.name, self.thruster, self.sensor, self.birth, self.hydrophones]
     
     def birthInfo(self):
         return [self.birth,[self.name, self.thruster, self.sensor, self.birth,
@@ -21,6 +21,7 @@ class Vehicle:
     def sensorsAUV(self):
         return [self.name, self.sensor]
 
+# robots
 v1 = Vehicle("Lua",8 ,["SENSOR X1", "SENSOR X2"], 2022,4)
 v2 = Vehicle("BrHUE",6,["SENSOR Y1", "SENSOR Y2"], 2021,4)
 
@@ -33,24 +34,26 @@ def tableOfAUVs():
     for i in numAUVs:
         AUVsTable.append(AUVs[i].infoAUV())
     return AUVsTable
-
+print(tableOfAUVs())
 def anAUV(x=0):
-    ''' default because '''
+    ''' default argument to avoid errors '''
     if x < len(AUVs):
         return AUVs[x].showThisAUV()
     else:
         return str.format('Invalid index. The max. index that you can choose is {}', len(AUVs) - 1)
-
+print(anAUV())
 def newer():
+    ''' adds all years to the list, sorts the list, deletes the year that was used only for sorting, and reverses the order of the list '''
     sortedBirth=[]
     for i in numAUVs:
         sortedBirth.append(AUVs[i].birthInfo())
-        sortedBirth.sort()
+    sortedBirth.sort()
     for i in numAUVs:
         del sortedBirth[i][0]
     return sortedBirth[::-1]
-
+print(newer())
 def AUVsensor():
+    ''' returns the robot's name and sensors '''
     sensors=[]
     for i in numAUVs:
         sensors.append(AUVs[i].sensorsAUV())
