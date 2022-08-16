@@ -56,5 +56,3 @@ def AUVsensor():
         sensors.append(AUVs[i].sensorsAUV())
     return sensors
 print(AUVsensor())
-
-
