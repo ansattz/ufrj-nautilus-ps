@@ -3,14 +3,15 @@ version: '3'
 services:
   ps:
     container_name: ps_container
-    image: 0972a6cd3373
+    image: d8a
     privileged: true
     environment:
      - DISPLAY=${DISPLAY} 
     volumes:
-      - ./../../../catkin_ws:/root/catkin_ws
+      - ./../../:/root/PS
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /etc/localtime:/etc/localtime
+
     network_mode: host
     stdin_open: true
     tty: true
