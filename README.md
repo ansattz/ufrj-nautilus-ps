@@ -31,7 +31,7 @@ With the `primeCheck()` function, the function will collect all prime numbers le
 - View robots individually
 - Rank robots from newest to oldest
 - Must contain another method of free choice
-
+---
 The fifth attribute for the Vehicle model was the hydrophone. The methods were thought to be used with a numpy array (to make tables, but the use was discarded and stayed in the main branch). The first method was used to create the table with all AUVs. The `tableOfAUVs()` function has a for loop to get the objects through the list index and use the `infoAUV()` method to create a list of each robot. Finally, the function returns a list with two lists (the two objects defined as v1 and v2).
 
 To show only one robot, the `anAUV()` function receives a parameter to be able to choose which robot will return. This parameter was placed because it was not informed about the possibility of randomness of the function (present any robot, individually). The parameter is default to always show at least one robot.
