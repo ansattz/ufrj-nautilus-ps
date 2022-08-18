@@ -7,7 +7,8 @@ class Vectors_listener():
     def __init__(self):
         rospy.init_node('vectors_listener', anonymous=True)
         rospy.Subscriber('auv_vectors', Accel ,self.callback)
-        self.pub = rospy.Publisher('Norm', Float64, queue_size=10)
+        self.pub1 = rospy.Publisher('Vlinear_norm', Float64, queue_size=10)
+        self.pub2 = rospy.Publisher('Vangular_norm', Float64, queue_size=10)
 
     def callback(self,msg):
         x=msg.linear.x
@@ -17,12 +18,17 @@ class Vectors_listener():
         x=msg.angular.x
         y=msg.angular.y
         z=msg.angular.z
+        
+        Vlinear_norm = (x**2 + y**2 + z**2)**0.5
+        Vangular_norm = (x**2 + y**2 + z**2)**0.5
 
-        norm = (x**2 + y**2 + z**2)**0.5
-        f = Float64()
-        f.data = norm
-        rospy.loginfo(f)
-        self.pub.publish(f)
+        f1 = Float64()
+        f2 = Float64()
+        f2.data = Vangular_norm
+        f1.data = Vlinear_norm
+        rospy.loginfo(f1)
+        self.pub1.publish(f1)
+        self.pub2.publish(f2)
 
 if __name__ == '__main__':
     l = Vectors_listener()
