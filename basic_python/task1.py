@@ -55,7 +55,7 @@ def primeSum():
     sum every of these primes'''
     l = []
     for i in range(1,1000):
-        if primeCheck(i):
+        if primeCheck(i) == True:
             l.append(i)
     return sum(l)
 
