@@ -2,12 +2,12 @@
 
 ## Basic Python
 ### 1 - List index
-Write a program that tells if the first and last items in a list are the same (it should work for any list, i.e, the number of items is not fixed)
+*Write a program that tells if the first and last items in a list are the same (it should work for any list, i.e, the number of items is not fixed)*
 
 Applying a simple conditional the function is able to check if the first item is equal to the last one. The statement `l[0] == l[-1]` compares the first item in the list with the last. 
 
 ### 2 - Filtering dividers
-Write a program that says the greatest prime divisor of a number given as input
+*Write a program that says the greatest prime divisor of a number given as input*
 
 The first function `primeCheck(n)` collects all divisors of the number given as input. If the number of elements in this list of divisors is different from 2 it is not prime, otherwise it is prime.
 
@@ -16,17 +16,17 @@ The second function `primeDivisor()` collects all divisors of the given number a
 The third function collects the largest number from the list returned by `primeDivisor()`
 
 ### 3 - Palindrome Number
-Tell if the given number is a palindrome
+*Tell if the given number is a palindrome*
 
 If the given number is equal to the inverse of it, then it is a palindrome. We will compare the number with itself starting from the last index to the first index.
 
 ### 4 - Sum of primes
-Give the sum of all prime numbers less than 1000
+*Give the sum of all prime numbers less than 1000*
 
 With the `primeCheck()` function, the function will collect all prime numbers less than 1000 and return the sum of the list that contains all these primes.
 
 ## OOP Python
-Create a Model for the AUVs of UFRJ Nautilus. It must contain the attributes: number of thursters, list with sensors, year of construction, vehicle name, and at least 1 attribute of free choice It must contain methods for:
+*Create a Model for the AUVs of UFRJ Nautilus. It must contain the attributes: number of thursters, list with sensors, year of construction, vehicle name, and at least 1 attribute of free choice It must contain methods for:*
 - View all AUVs in table
 - View robots individually
 - Rank robots from newest to oldest
