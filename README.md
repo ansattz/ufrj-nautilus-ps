@@ -18,7 +18,7 @@ The third function collects the largest number from the list returned by `primeD
 ### 3 - Palindrome Number
 *Tell if the given number is a palindrome*
 
-If the given number is equal to the inverse of it, then it is a palindrome. We will compare the number with itself starting from the last index to the first index.
+If the given number is equal is equal to itself in reverse, then it is a palindrome. We will compare the number with itself starting from the last index to the first index.
 
 ### 4 - Sum of primes
 *Give the sum of all prime numbers less than 1000*
