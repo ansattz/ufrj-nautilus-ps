@@ -13,7 +13,7 @@ The first function `primeCheck(n)` collects all divisors of the number given as 
 
 The second function `primeDivisor(m)` collects all divisors of the given number and checks which numbers in this list are prime using the (primeCheck) function. Returns a list of prime divisors of the number m.
 
-The third function collects the largest number from the list returned by `primeDivisor()`
+The third function collects the largest number from the list returned by `primeDivisor(m)`
 
 ### 3 - Palindrome Number
 *Tell if the given number is a palindrome*
