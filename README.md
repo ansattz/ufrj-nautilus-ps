@@ -11,7 +11,7 @@ Applying a simple conditional the function is able to check if the first item is
 
 The first function `primeCheck(n)` collects all divisors of the number given as input. If the number of elements in this list of divisors is different from 2 it is not prime, otherwise it is prime.
 
-The second function `primeDivisor()` collects all divisors of the given number and checks which numbers in this list are prime using the (primeCheck) function. Returns a list of prime divisors of the number m.
+The second function `primeDivisor(m)` collects all divisors of the given number and checks which numbers in this list are prime using the (primeCheck) function. Returns a list of prime divisors of the number m.
 
 The third function collects the largest number from the list returned by `primeDivisor()`
 
