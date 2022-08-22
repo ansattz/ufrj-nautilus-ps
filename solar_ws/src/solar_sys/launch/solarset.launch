@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<group ns="solar_system">
+		<rosparam command="load" file="$(find solar_sys)/param/body_t.yaml"/>
+	</group>
+	<node pkg="solar_sys" type="fixedStar.py" name="sys_node"/>
+</launch>

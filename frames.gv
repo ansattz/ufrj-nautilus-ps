@@ -1,0 +1,7 @@
+digraph G {
+"star" -> "planet"[label="Broadcaster: /sys_node\nAverage rate: 11.248 Hz\nMost recent transform: 1661189168.627 ( 4.189 sec old)\nBuffer length: 0.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1661189172.817"[ shape=plaintext ] ;
+ }->"star";
+}
