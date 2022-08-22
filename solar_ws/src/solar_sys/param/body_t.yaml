@@ -1,0 +1,15 @@
+sys:
+  star:
+    x: 0
+    y: 0
+    z: 0
+
+  planet:
+    x: 20
+    y: 20 
+    z: 0
+
+  sat:
+    x: 30
+    y: 30
+    z: 0
