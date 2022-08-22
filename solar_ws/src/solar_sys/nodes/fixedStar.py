@@ -13,7 +13,7 @@ if __name__ == '__main__':
     t.header.frame_id = "star"
     t.child_frame_id = "planet"
 
-    u.header.frame_id="planet"
+    u.header.frame_id = "planet"
     u.child_frame_id = "sat"
 
     rate = rospy.Rate(10)
