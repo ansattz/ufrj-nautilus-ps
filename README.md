@@ -43,3 +43,7 @@ The method chosen was to collect the name and sensors of the robots. The `AUVsen
 ## Basic ROS
 
 The ps_pkg contains a publisher, a subscriber and two topics. The `Accel()` method used in the publisher provides linear and angular velocity vectors in free space. In this case, the x,y and z coordinate data were randomly given using a list with numbers from 0 to 999 and applying `random.choice()` on each coordinate. The subscriber listens to the published topic by the publisher, calculates the norm of both the linear and angular vectors, and publishes the results in two separate topics: Vlinear_norm and Vangular_norm.
+
+## Advanced ROS 
+
+Using the tf package to create a simple solar system. The tree structure has 3 frames: a fixed star (parent frame), a planet (child frame of the fixed star) that orbits the star regularly and a satellite (child frame) that also orbits the planet regularly. The planet has an orbit of radius 5 with respect to the fixed star (sun) and translation of cos(x/10) on the x axis and sin(y/10) on the y axis. The satellite has an orbit of radius 1.8 and translation of cos(x/8) and sin(y/8). This is the node called fixedStar, which will be loaded in the solarset.launch file, together with the body_t.yaml parameter file, which will be added in the parameter server that will feed the frames of the fixedStar node. Using rviz with display type tf, we can visualize the solar system and the behavior of star, planet and sat frames.
